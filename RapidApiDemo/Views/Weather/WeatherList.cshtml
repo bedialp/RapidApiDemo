@@ -1,0 +1,12 @@
+﻿@model List<WeatherViewModel>
+@{
+	Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+	@ViewBag.temp
+	@ViewBag.sunset
+	@ViewBag.sunrise
+</div>

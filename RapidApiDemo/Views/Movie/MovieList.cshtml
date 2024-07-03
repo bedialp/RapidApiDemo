@@ -1,0 +1,28 @@
+﻿@model List<MovieViewModel>
+
+@{
+	Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+	<br /><br />
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Film Adı</th>
+			<th>Puanı</th>
+			<th>Sitede Gör</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.rank</td>
+				<td>@item.title</td>
+				<td>@item.rating</td>
+				<td><a href="@item.imdb_link" class="btn btn-primary">Sitede Gör</a></td>
+			</tr>
+		}
+	</table>
+</div>
